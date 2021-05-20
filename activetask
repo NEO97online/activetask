@@ -1,0 +1,6 @@
+#!/bin/sh
+
+task=$(timew | awk -F'"' '$0=$2')
+time=$(timew | awk '/Total/{print $NF}')
+
+echo "$task" "$time"
